@@ -11,7 +11,7 @@ function Question({ question, onAnswered }) {
     }
 
     const timeoutId = setTimeout(() => {
-      setTimeRemaining(timeRemaining - 1);
+      setTimeRemaining((prevTime) => prevTime - 1);
     }, 1000);
 
     return () => clearTimeout(timeoutId);
